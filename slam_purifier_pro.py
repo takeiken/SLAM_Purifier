@@ -29,7 +29,7 @@ class SLAMProcessor:
         self.clean_batch = re.sub(r'[\\/*?:"<>|]', "_", raw_name) if raw_name else "Batch"
         
         self.output_dir = os.path.join(input_dir, f"{self.clean_batch}_{self.timestamp}")
-        self.csv_path = os.path.join(self.output_dir, f"Summary_{self.clean_batch}.csv")
+        self.csv_path = os.path.join(self.output_dir, f"Summary_{self.clean_batch}_{self.timestamp}.csv")
         
         self.blur_th = blur_th
         self.shift_th = shift_th
